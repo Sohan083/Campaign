@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">bKash ARC2020</string>
+    <string name="gps_network_not_enabled">gps not enabled</string>
+</resources>
