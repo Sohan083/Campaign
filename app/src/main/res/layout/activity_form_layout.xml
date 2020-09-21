@@ -10,28 +10,116 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="0dp"
-        android:layout_height="50dp"
+        android:layout_height="70dp"
         android:background="@color/red"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="0dp"
+                android:layout_height="16dp"
+                android:text=""
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtTeam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Team: "
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/name" />
+
+            <TextView
+                android:id="@+id/team"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/txtTeam"
+                app:layout_constraintTop_toBottomOf="@+id/name" />
+            <TextView
+                android:id="@+id/txtTodayCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Today Count: "
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtTeam" />
+
+            <TextView
+                android:id="@+id/todayCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/txtTodayCount"
+                app:layout_constraintTop_toBottomOf="@+id/txtTeam" />
+
+            <TextView
+                android:id="@+id/txtTotalCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Count: "
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtTodayCount" />
+            <TextView
+                android:id="@+id/totalCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/txtTotalCount"
+                app:layout_constraintTop_toBottomOf="@+id/txtTodayCount" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
         <ImageButton
             android:id="@+id/logoutBtn"
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:foreground="?selectableItemBackground"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
             android:background="@drawable/ic_logout"
+            android:foreground="?selectableItemBackground"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
+            android:id="@+id/imageView"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:background="@drawable/logo"
+            android:background="@drawable/logo_bkash"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

@@ -161,7 +161,7 @@ public class LoginActivity extends AppCompatActivity {
                                 SharedPreferences.Editor editor = getSharedPreferences("user",MODE_PRIVATE).edit();
                                 editor.putString("name",jsonObject.getString("UserFullName"));
                                 editor.putString("id",jsonObject.getString("RecordId"));
-                                editor.putString("area",jsonObject.getString("AreaName"));
+                                editor.putString("team",jsonObject.getString("TeamName"));
                                 editor.apply();
                                 Intent intent = new Intent(getApplicationContext(), ActivityForm.class);
                                 startActivity(intent);
