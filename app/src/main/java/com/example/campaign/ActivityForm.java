@@ -65,7 +65,7 @@ public class ActivityForm extends AppCompatActivity {
         chkSetA2 = (CheckBox) findViewById(R.id.chkSetA2);
         chkSetB1 = (CheckBox) findViewById(R.id.chkSetB1);
         chkSetB2 = (CheckBox) findViewById(R.id.chkSetB2);
-        SharedPreferences sharedPreferences2 = getSharedPreferences("user", 0);
+        SharedPreferences sharedPreferences2 = getSharedPreferences("bkash_user", 0);
         sharedPreferences = sharedPreferences2;
         userId = sharedPreferences2.getString("id", (String) null);
         logoutBtn.setOnClickListener(new View.OnClickListener() {
@@ -222,7 +222,7 @@ public class ActivityForm extends AppCompatActivity {
             public void onErrorResponse(VolleyError error) {
                 sweetAlertDialog.dismiss();
                 CustomUtility.showError(ActivityForm.this, "Network Error, try again!", "Failed");
-                final SweetAlertDialog s = new SweetAlertDialog(ActivityForm.this, 2);
+                final SweetAlertDialog s = new SweetAlertDialog(ActivityForm.this, SweetAlertDialog.ERROR_TYPE);
                 s.setConfirmText("Ok");
                 s.setTitleText("Network Error, try again!");
                 s.setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {

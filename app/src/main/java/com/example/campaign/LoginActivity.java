@@ -75,7 +75,7 @@ public class LoginActivity extends AppCompatActivity {
 
         checkPermission();
 
-        sharedPreferences = getSharedPreferences("user",MODE_PRIVATE);
+        sharedPreferences = getSharedPreferences("bkash_user",MODE_PRIVATE);
         if(sharedPreferences.contains("id"))
         {
             Intent intent = new Intent(getApplicationContext(), ActivityForm.class);
@@ -157,8 +157,8 @@ public class LoginActivity extends AppCompatActivity {
                             message = jsonObject.getString("message");
                             if (code.equals("true")) {
                                 jsonObject = jsonObject.getJSONObject("userData");
-                                sharedPreferences = getSharedPreferences("user",MODE_PRIVATE);
-                                SharedPreferences.Editor editor = getSharedPreferences("user",MODE_PRIVATE).edit();
+                                sharedPreferences = getSharedPreferences("bkash_user",MODE_PRIVATE);
+                                SharedPreferences.Editor editor = getSharedPreferences("bkash_user",MODE_PRIVATE).edit();
                                 editor.putString("name",jsonObject.getString("UserFullName"));
                                 editor.putString("id",jsonObject.getString("RecordId"));
                                 editor.putString("team",jsonObject.getString("TeamName"));
