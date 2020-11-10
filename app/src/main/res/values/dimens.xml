@@ -2,5 +2,5 @@
 <resources>
 
     <dimen name="tittle_text_size">16sp</dimen>
-
+    <dimen name="semi_tittle_size">14sp</dimen>
 </resources>

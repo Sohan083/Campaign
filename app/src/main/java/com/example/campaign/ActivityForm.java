@@ -176,7 +176,13 @@ public class ActivityForm extends AppCompatActivity {
         } else if (!isCorrectPhoneNumber(consumerPhone)) {
             CustomUtility.showError(this, "Please enter correct phone number", "Incorrect phone number");
             return false;
-        } else if (!setType.equals("")) {
+        }
+        else if(hasLogin.equals("0"))
+        {
+            CustomUtility.showError(this,"Please select bKash login", "Required Feild!");
+            return false;
+        }
+        else if (!setType.equals("")) {
             return true;
         } else {
             CustomUtility.showError(this, "Please select one Set", "Required Feild!");
